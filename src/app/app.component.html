@@ -1,0 +1,29 @@
+<div class="row text-center">
+  <div class="col">
+    <h1>Contador</h1>
+        <h2>{{contador}}</h2>    
+  </div>
+</div>
+
+<div class="row text-center ">
+  <div class="col">
+    <button  (click)="incrementador()" class="btn btn-primary" >INCREMENTAR</button>
+    <button (click)="decrementador()" class="btn btn-info" >DECREMENTAR</button>
+  </div>
+</div>
+<hr>
+<div class="row text-center ">
+  <div class="col">
+    <app-hijo  ></app-hijo>
+  </div>
+</div>
+<hr>
+
+<div class="row text-center ">
+  <div class="col">
+    <app-nieto [contador]="contador" (contadorCambio)="contador = $event" ></app-nieto>
+  </div>
+</div>
+
+
+<router-outlet></router-outlet>
